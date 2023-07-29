@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/Users/LiewYuPing/Downloads/Lugia/image/logo lugia.png">
+<title>Destination</title>
+<style>
+  *{
+    margin:0;
+    padding:0;
+  }
+.border{
+    border-bottom:2px solid black;
+    padding-top:4%;
+    background-color: white;
+    box-shadow:0 5px grey;
+    position:fixed;
+    top:0%;
+    width:100%;
+    text-align:center;
+    z-index:2;
+}
+
+.shopping {
+    float:right;
+    position:relative;
+    right:30px;
+    padding-right: 30px;
+    background-color: orange;
+    border-radius:20%;
+    padding:8px 8px 5px ;
+  
+}
+.shopping:hover{
+  cursor:pointer;
+  background-color: wheat;
+  border-radius:20%;
+  
+
+}
+.border a{
+ padding:0em 0.5em;
+ font-size:45px;
+ min-width: 100px;
+ text-decoration: none;
+ display:inline-block;
+ 
+}
+.border a:hover{
+  color:blue;
+}
+
+.sidenav{
+    height:100%;
+    width: 0;
+    position:fixed;
+    z-index: 1;
+    top: 16%;
+    left: 0;
+    background-color:#111;
+    border-right:3px solid black;
+    overflow-x:hidden;
+    padding: 60px 0;
+    transition:0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#animation {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.sidenav2 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+.sidenav2 .closebtn {
+  position: absolute;
+  top: 5%;
+  left: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color:#818181;
+  text-decoration: none;
+}
+.sidenav2 a:hover {
+  color: white;
+}
+.back{
+    border-style:solid;
+    border-radius:80px;
+    padding: 1px;
+    margin:auto;
+    width:150px;
+    height: 35px;
+    background: white;
+    text-align:left;
+    position: relative;
+    top:0px;
+    float:left;
+    background-attachment: fixed;
+  
+}
+
+.back:hover{
+    cursor:pointer;
+    background: black;
+   
+}
+.back:active{
+    cursor:pointer;
+    background: white;
+}
+h1{
+  color:white;
+}
+
+table{
+  position:relative;
+  top:3em;
+  left:23%;
+  border: white solid 1px;
+  text-align: center;
+
+
+}
+
+td{
+  border-color:white;
+  border: white solid 1px;
+  color:white;
+  width: 200px;
+}
+th{
+  color:white;
+  border-color:white;
+  border: white solid 1px;
+  padding:20px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+position:relative;
+top:7rem;
+left:3rem;
+justify-content: center;
+
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 60%;
+  margin: 50px;
+  text-align: center;
+  line-height: 75px;
+  min-width:300px;
+  min-height:300px;
+  
+}
+
+.small-image {
+  width: 500px;
+  height: 300px;
+}
+#IMG{
+    display: block;
+    
+
+}
+#IMG2{
+    display: none;
+   
+}
+#IMG3{
+    display: none;
+
+}
+#IMG4{
+    display: none;
+ 
+}
+#IMG5{
+    display: none;
+   
+ 
+}
+#IMG6{
+    display: none;
+    
+    
+}
+#IMG7{
+    display: none;
+   
+}
+#IMG8{
+    display: none;
+   
+}
+</style>
+</head><body>
+
+    <div class="border">
+        <div class="back">
+        <h1 style="color:orange;
+                   text-align:center;" onclick="window.location.href=&#39;Home.html&#39;">
+                   &lt;= Back
+                </h1>
+              </div>
+        <a href="" onclick="openNav(); changeIMG();" &#9776="">Domestic</a>    
+        <a onclick="changeIMG2()">International
+
+      
+       
+    </div>
+  
+    
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  
+        </div>
+        <div id="animation">
+          <div class="flex-container">
+            
+          
+       
+            
+            <a href="attraction.html">
+              <img src="/Users/LiewYuPing/Downloads/Lugia/image/domestic.png" alt="Domestic" class="small-image">
+          </a>
+
+          <a href="attraction.html">
+            <img src="/Users/LiewYuPing/Downloads/Lugia/image/International.png" alt="International" class="small-image">
+        </a>
+            
+        </div>
+      
+    
+      
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("animation").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("animation").style.marginLeft = "0";
+    }
+
+    function openNav2() {
+      document.getElementById("mySidenav2").style.width = "100%";
+    }
+
+    function closeNav2() {
+      document.getElementById("mySidenav2").style.width = "0";
+      
+    }
+    function changeIMG(){
+              
+                  document.getElementById("IMG").style.display="block";
+                    document.getElementById("IMG2").style.display="none";
+                    document.getElementById("IMG3").style.display="none";
+                    document.getElementById("IMG4").style.display="none";
+                    document.getElementById("IMG5").style.display="none";
+                    document.getElementById("IMG6").style.display="none";
+                    document.getElementById("IMG7").style.display="none";
+                    document.getElementById("IMG8").style.display="none";
+                        
+            }
+    function changeIMG2(){
+              
+              document.getElementById("IMG").style.display="none";
+                document.getElementById("IMG2").style.display="block";
+                document.getElementById("IMG3").style.display="none";
+                    document.getElementById("IMG4").style.display="none";
+                    document.getElementById("IMG5").style.display="none";
+                    document.getElementById("IMG6").style.display="none";
+                    document.getElementById("IMG7").style.display="none";
+                    document.getElementById("IMG8").style.display="none";
+                    
+        }
+
+                    
+         
+  </script>
+
+</body></html>

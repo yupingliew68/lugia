@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/Users/LiewYuPing/Downloads/Lugia/logo lugia.png">
+<link rel="stylesheet" href="./Login_files/login.css">
+<script defer="" src="./Login_files/validation3.js"></script>
+<title>Login</title>
+</head><body>
+    <div class="centerbackground">
+        <div class="logincontainer">
+            <div class="center">
+            <div class="Login">
+                <form id="info">
+                    <h1>Login</h1>
+                    <div class="tfield">
+                        <div class="input-control">
+                    <label for="Username">Username:</label><br>
+                    <input type="text" id="Username" name="Username" required=""><br>
+                    <div class="error"></div>
+                    </div>
+                </div>
+                <div class="tfield">
+                    <div class="input-control">
+                    <label for="Email">Email:</label><br>
+                    <input type="email" id="Email" name="Email" required=""><br>
+                    <div class="error"></div>
+                </div>
+                </div>
+                <div class="tfield">
+                    <div class="input-control">
+                    <label for="Password">Password:</label><br>
+                    <div id="IMG" onclick="changeIMG()"><img src="./Login_files/eye.png" width="30em" height="20em" alt="showpassword"></div>
+                    <div id="IMG2" onclick="changeIMG()"><img src="./Login_files/eye2.png" width="30em" height="20em" alt="hidepassword"></div>
+                    <input type="Password" id="Password" name="Password" required=""><br> 
+                    <div class="error"></div>
+                </div>
+                </div>    
+                   
+                    <div class="signup">
+                        Haven't sign up yet? <a href="">Sign up</a>
+                    </div>
+                    <button type="submit" form="info" value="Submit">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+       
+        function changeIMG(){
+            if(document.getElementById("IMG").style.display=="block"){
+                document.getElementById("IMG2").style.display="block";
+                document.getElementById("IMG").style.display="none";
+                document.getElementById("Password").type="text";
+            }
+            else{
+                document.getElementById("IMG2").style.display="none";
+                document.getElementById("IMG").style.display="block";
+                document.getElementById("Password").type="Password";
+            }    
+        }
+        
+    </script>
+
+</body></html>
